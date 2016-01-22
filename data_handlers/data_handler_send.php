@@ -23,9 +23,10 @@ if(!empty($_SESSION['user_id'])){
         $json_for_return = json_encode($_POST["task_data"]);
         print($json_for_return);
         //print('mysqli_affected_rows is true');
-        //print_r($results);
+        print_r($results);
     }else {
         print('something is not working, its probably the id breaking things again.');
+        print($query);
     }
 }else{
     print('you are either logged out or your credentials are wrong');
