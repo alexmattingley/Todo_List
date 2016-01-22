@@ -41,7 +41,8 @@
 .content_container{
     padding-top: 150px;
     height: 120%;
-    background-image: url("http://www.remodelista.com/files/styles/733_0s/public/fields/Linen-Reclaimed-oak-floors-remodelista.jpg");
+    background-image: url("photos/IMG_4213.jpg");
+    background-size: cover;
 }
 
 body{
