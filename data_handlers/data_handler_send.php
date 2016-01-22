@@ -20,8 +20,7 @@ if(!empty($_SESSION['user_id'])){
     $results = mysqli_query($conn, $query);
     if(mysqli_affected_rows($conn) > 0){
         $json_for_return = json_encode($_POST["task_data"]);
-        print('json for return' . $json_for_return);
-        print_r('$results ' . $results);
+        print($json_for_return);
     }else {
         print('something is not working, its probably the id breaking things again. Check out the query below.');
         print($query);
