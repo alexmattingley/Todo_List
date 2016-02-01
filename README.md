@@ -36,5 +36,5 @@ more details.
    ![Alt text](/screenshots/pic10.png)
 
 <h2>Link to Live Preview:</h2>
-<a href="http://jasonekstrom.com/Todo_List" target="_blank">Click here to see a live preview</a>
+<a href="http://alexmattingley.com/todo_list/" target="_blank">Click here to see a live preview</a>
 
