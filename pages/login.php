@@ -13,7 +13,7 @@
 
     <form role="form">
         <div class="form-group">
-            <label for="text">Email address:</label>
+            <label for="text">Username:</label>
             <input type="text" class="form-control" id="username">
         </div>
         <div class="form-group">
