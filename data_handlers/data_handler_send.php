@@ -12,20 +12,18 @@ if(!empty($_SESSION['user_id'])){
     if (empty($due_date)) {
         $due_date = 2147483647;
     }
-    $id = null;
     $priority = $_POST["task_data"]["priority"];
     $task= $_POST["task_data"]["task"];
     $user_id = $_SESSION['user_id'];
     require('../mysql_connect.php');
-    $query = "INSERT INTO `tdl_item_list`(`id`, `task`, `details`, `created_datetime`, `user_id`, `complete`, `priority`, `due_date`) VALUES ('$id','$task','$details','$created_datetime','$user_id','$complete','$priority','$due_date')";
+    $query = "INSERT INTO `tdl_item_list`(`id`, `task`, `details`, `created_datetime`, `user_id`, `complete`, `priority`, `due_date`, `category`) VALUES (null,'$task','$details','$created_datetime','$user_id','$complete','$priority','$due_date','none')";
     $results = mysqli_query($conn, $query);
     if(mysqli_affected_rows($conn) > 0){
         $json_for_return = json_encode($_POST["task_data"]);
         print($json_for_return);
-        //print('mysqli_affected_rows is true');
-        //print_r($results);
     }else {
-        print('something is not working, its probably the id breaking things again.');
+        print('something is not working, its probably the id breaking things again. Check out the query below.');
+        print($query);
     }
 }else{
     print('you are either logged out or your credentials are wrong');

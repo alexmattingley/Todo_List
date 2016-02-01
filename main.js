@@ -135,11 +135,9 @@ function addTask() {
     editState = false;
     var task = $("#taskInput").val();
     var due_date = $("#datepickerAdd").val() + " " + $("#timepickerAdd").val();
-    console.log(due_date);
     var priority = $("#priorityInput").val();
     var details = $("#detailsInput").val();
     var created_datetime = Date.now() / 1000;
-    console.log(created_datetime);
     var complete = 0;
     var todo_item = {
         complete: complete,
@@ -493,7 +491,6 @@ function complete(id, value) {
  * @return: N/A;
  */
 function add_item_db(task_object) {
-    console.log('add_item_db pre-ajax');
     console.log("task_object", task_object);
     $.ajax({
         url: 'data_handlers/data_handler_send.php',
@@ -503,7 +500,7 @@ function add_item_db(task_object) {
             task_data: task_object
         },
         dataType: 'json',
-        success: function (response) {
+        success: function(response) {
             console.log(response);
             update_dom_table();
         }
